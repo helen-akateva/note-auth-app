@@ -34,7 +34,7 @@ interface SessionResponse {
 
 interface UpdateUserData {
   email?: string;
-  name?: string;
+  username?: string;
 }
 
 export async function fetchNotes(
