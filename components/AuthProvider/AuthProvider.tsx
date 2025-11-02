@@ -38,7 +38,7 @@ export default function AuthProvider({ children }: Props) {
         } else {
           clearIsAuthenticated();
         }
-      } catch (error) {
+      } catch  {
         if (process.env.NODE_ENV === "development") {
           console.log("Auth check failed");
         }
