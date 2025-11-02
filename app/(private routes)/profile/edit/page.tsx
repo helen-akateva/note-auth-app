@@ -85,7 +85,7 @@ export default function EditProfileData() {
             className={css.avatar}
           />
         ) : (
-          <div  className={css.avatarPlaceholder}>
+          <div className={css.avatarPlaceholder}>
             {username?.[0]?.toUpperCase() ||
               user?.email?.[0]?.toUpperCase() ||
               "U"}

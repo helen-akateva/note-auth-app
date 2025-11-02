@@ -1,6 +1,5 @@
 "use client";
 
-
 import Modal from "@/components/Modal/Modal";
 import { useRouter } from "next/navigation";
 import css from "./NotePreview.module.css";

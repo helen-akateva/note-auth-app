@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 interface Props {
@@ -8,16 +8,13 @@ interface Props {
 }
 
 const AuthLayout = ({ children }: Props) => {
-  const [loading, setLoading] = useState(true);
-
   const router = useRouter();
 
   useEffect(() => {
     router.refresh();
-    setLoading (false);
   }, [router]);
 
-  return <>{loading ? <div>Loading...</div> : children}</>;
+  return <>{children}</>;
 };
 
 export default AuthLayout;

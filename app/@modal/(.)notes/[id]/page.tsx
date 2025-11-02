@@ -1,4 +1,3 @@
-
 import { getNoteById } from "@/lib/api/clientApi";
 import NotePreviewClient from "./NotePreview.client";
 import {
