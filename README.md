@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Authentication App
 
-## Getting Started
+A modern authentication system built with Next.js 15, featuring user registration, login, protected routes, and user profile management with notes functionality.
 
-First, run the development server:
+## 🚀 Demo
 
+[Live Demo](https://your-demo-link.vercel.app)
+
+## 📋 Description
+
+This project demonstrates a complete authentication flow in Next.js using App Router. It implements secure user authentication with access and refresh tokens, protected routes using middleware, and a notes management system for authenticated users. The application showcases modern React patterns and Next.js best practices for building secure web applications.
+
+## ✨ Features
+
+- 🔐 User registration and login
+- 🔄 Token-based authentication (access & refresh tokens)
+- 🛡️ Protected routes with middleware
+- 👤 User profile management
+- 📝 Notes CRUD functionality for authenticated users
+- 🎨 Modern UI with Tailwind CSS
+- 📱 Responsive design
+- 🔔 Toast notifications for user feedback
+- ⚡ Pagination for notes list
+- 🔍 Debounced search functionality
+
+## 🛠️ Technologies
+
+- **Framework:** Next.js 16
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS 4
+- **State Management:** Zustand
+- **HTTP Client:** Axios
+- **UI Components:**
+  - React Hot Toast (notifications)
+  - React Paginate (pagination)
+- **Data Fetching:** React Query integration
+- **Utilities:** use-debounce
+
+## 📦 Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/helen-akateva/nextjs-auth-demo.git
+cd nextjs-auth-demo
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+## 🏗️ Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── app/
+│   ├── (auth routes)/     # Authentication pages (sign-in, sign-up)
+│   ├── (private routes)/  # Protected pages (profile, notes)
+│   ├── @modal/            # Parallel routes for modals
+│   └── api/               # API routes
+├── components/            # Reusable React components
+├── lib/                   # Utility functions and API clients
+├── types/                 # TypeScript type definitions
+└── middleware.ts          # Route protection logic
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔒 Authentication Flow
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The application uses a token-based authentication system:
+- Users receive access and refresh tokens upon login
+- Middleware automatically refreshes expired access tokens
+- Protected routes redirect unauthenticated users to sign-in
+- Authenticated users cannot access public auth routes
 
-## Deploy on Vercel
+## 📝 Available Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Deployment
+
+The application is deployed on Vercel.
+
+## 👩‍💻 Author
+
+**Olena Akatieva**
+
+- LinkedIn: [linkedin.com/in/olena-akatieva](https://linkedin.com/in/olena-akatieva)
+- GitHub: [@helen-akateva](https://github.com/helen-akateva)
+
+## 📄 License
+
+This project is open source and available under the MIT License.
