@@ -1,6 +1,6 @@
 # Next.js Authentication App
 
-A modern authentication system built with Next.js 15, featuring user registration, login, protected routes, and user profile management with notes functionality.
+A modern authentication system built with Next.js, featuring user registration, login, protected routes, and user profile management with notes functionality.
 
 ## 🚀 Demo
 
